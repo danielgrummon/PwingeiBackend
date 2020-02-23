@@ -14,8 +14,8 @@ public class PwingeiEntity {
 	@Id
 	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "PWINGEI_SEQ")
 	@SequenceGenerator(sequenceName = "pwingei_seq", allocationSize = 1, name = "PWINGEI_SEQ")
-	@Column(name = "PWINGEI_ID", updatable = false, nullable = false)
-	private Long pwingeiId;
+	@Column(name = "ID", updatable = false, nullable = false)
+	private Long Id;
 	
 	@NotNull
 	@Column(name = "TYPE", nullable = false)
