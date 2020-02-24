@@ -1,4 +1,13 @@
-INSERT INTO PWINGEI (TYPE, LOCATION, DATE) VALUES
-  ('31', 'Campoma Bridge', '2011'),
-  ('9', 'Campoma Bridge', '2008'),
-  ('40', 'Campoma Bridge', '2012');
+DROP TABLE IF EXISTS PWINGEI;
+  
+CREATE TABLE PWINGEI (
+  ID INT AUTO_INCREMENT  PRIMARY KEY,
+  TYPE VARCHAR(250) NOT NULL,
+  LOCATION VARCHAR(250) NOT NULL,
+  DATE VARCHAR(250) DEFAULT NULL
+);
+
+INSERT INTO PWINGEI (ID, TYPE, LOCATION, DATE) VALUES
+  (1,'31', 'Campoma Bridge', '2011'),
+  (2, '9', 'Campoma Bridge', '2008'),
+  (3,'40', 'Campoma Bridge', '2012');
