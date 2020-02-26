@@ -13,7 +13,6 @@ import pwingei.service.PwingeiService;
 
 @Slf4j
 @RestController
-@CrossOrigin(origins = "https://pwingei-backend.herokuapp.com")
 @RequestMapping(value = "/app/rest/wingei", produces = MediaType.APPLICATION_JSON_VALUE)
 public class PwingeiController {
 	
@@ -21,6 +20,7 @@ public class PwingeiController {
 	private PwingeiService pwingeiService;
 
 	@GetMapping("/pwingei")
+	@CrossOrigin(origins = "*")
 	public List<PwingeiDto> getWingeiList() {
 		return transformToPwingeiDto(pwingeiService.findAllPwingei());
 	}
