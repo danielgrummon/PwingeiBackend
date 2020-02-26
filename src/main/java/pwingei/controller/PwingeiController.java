@@ -13,7 +13,7 @@ import pwingei.service.PwingeiService;
 
 @Slf4j
 @RestController
-@CrossOrigin
+@CrossOrigin(origins = "https://pwingei-backend.herokuapp.com")
 @RequestMapping(value = "/app/rest/wingei", produces = MediaType.APPLICATION_JSON_VALUE)
 public class PwingeiController {
 	
