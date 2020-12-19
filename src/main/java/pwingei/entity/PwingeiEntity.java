@@ -34,11 +34,11 @@ public class PwingeiEntity {
 	private String date;
 
 	@NotNull
-	@Column(name = "IMAGE_URL", nullable = false)
+	@Column(name = "IMAGEURL", nullable = false)
 	private String imageUrl;
 
 	@NotNull
-	@Column(name = "IMAGE_URL_2", nullable = false)
+	@Column(name = "IMAGEURL2", nullable = false)
 	private String imageUrl2;
 
 	@NotNull
