@@ -20,7 +20,7 @@ public class PwingeiController {
 	@Autowired
 	private PwingeiService pwingeiService;
 
-	@CrossOrigin
+//	@CrossOrigin
 	@GetMapping("/findAll")
 	public List<PwingeiDto> getWingeiList() {
 		return transformToPwingeiDto(pwingeiService.findAllPwingei());
@@ -32,7 +32,7 @@ public class PwingeiController {
 //        return new PwingeiDto(pwingeiService.findById(id).get());
 //    }
 	
-    @CrossOrigin
+  //  @CrossOrigin
     @RequestMapping(method = RequestMethod.GET, path = "/{id}")
     public PwingeiDto retrieve(@PathVariable Long id) {
     	return new PwingeiDto(pwingeiService.findById(id).get());
