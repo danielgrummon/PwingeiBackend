@@ -20,11 +20,13 @@ public class PwingeiController {
 	@Autowired
 	private PwingeiService pwingeiService;
 
+	@CrossOrigin
 	@GetMapping("/findAll")
 	public List<PwingeiDto> getWingeiList() {
 		return transformToPwingeiDto(pwingeiService.findAllPwingei());
 	}
 	
+	@CrossOrigin
     @GetMapping(path = {"/{id}"})
     public PwingeiEntity findOne(@PathVariable("id") int id){
         return pwingeiService.findById(id).get();
