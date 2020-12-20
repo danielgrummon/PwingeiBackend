@@ -1,6 +1,7 @@
 package pwingei.service;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -16,7 +17,13 @@ public class PwingeiService {
 	@Autowired
 	PwingeiRepository pwingeiRepository;
 	
+
 	public List<PwingeiEntity> findAllPwingei(){
 		return pwingeiRepository.findAll();
 	}
+		
+
+    public Optional < PwingeiEntity > findById(int id) {
+        return pwingeiRepository.findById(new Long(id));
+    }
 }
