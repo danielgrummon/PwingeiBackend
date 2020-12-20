@@ -44,6 +44,10 @@ public class PwingeiEntity {
 	@NotNull
 	@Column(name = "PRICE", nullable = false)
 	private String price;
+	
+	@NotNull
+	@Column(name = "AVAILABLE", nullable = false)
+	private String available;
 
 	@NotNull
 	@Column(name = "DESCRIPTION", nullable = false)
