@@ -12,7 +12,6 @@ import pwingei.entity.PwingeiEntity;
 import pwingei.service.PwingeiService;
 
 
-@CrossOrigin
 @Slf4j
 @RestController
 @RequestMapping(value = "/app/rest/wingei", produces = MediaType.APPLICATION_JSON_VALUE)
@@ -22,14 +21,11 @@ public class PwingeiController {
 	private PwingeiService pwingeiService;
 
 	@GetMapping("/findAll")
-	@CrossOrigin
 	public List<PwingeiDto> getWingeiList() {
 		return transformToPwingeiDto(pwingeiService.findAllPwingei());
 	}
 	
-	
     @GetMapping(path = {"/{id}"})
-    @CrossOrigin
     public PwingeiEntity findOne(@PathVariable("id") int id){
         return pwingeiService.findById(id).get();
     }
