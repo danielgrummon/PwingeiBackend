@@ -20,23 +20,23 @@ public class PwingeiController {
 	@Autowired
 	private PwingeiService pwingeiService;
 
-//	@CrossOrigin
+	@CrossOrigin
 	@GetMapping("/findAll")
 	public List<PwingeiDto> getWingeiList() {
 		return transformToPwingeiDto(pwingeiService.findAllPwingei());
 	}
 		
-//	@CrossOrigin
-//    @GetMapping(path = {"/{id}"})
-//    public PwingeiDto findOne(@PathVariable("id") int id){
-//        return new PwingeiDto(pwingeiService.findById(id).get());
-//    }
+	@CrossOrigin
+    @GetMapping(path = {"/{id}"})
+    public PwingeiDto findOne(@PathVariable("id") int id){
+        return new PwingeiDto(pwingeiService.findById(id).get());
+    }
 	
   //  @CrossOrigin
-    @RequestMapping(method = RequestMethod.GET, path = "/{id}")
-    public PwingeiDto retrieve(@PathVariable Long id) {
-    	return new PwingeiDto(pwingeiService.findById(id).get());
-    }
+//    @RequestMapping(method = RequestMethod.GET, path = "/{id}")
+//    public PwingeiDto retrieve(@PathVariable Long id) {
+//    	return new PwingeiDto(pwingeiService.findById(id).get());
+//    }
 	
 	private List<PwingeiDto> transformToPwingeiDto(Collection<PwingeiEntity> pwingeiList){
 		return pwingeiList.stream().map(PwingeiDto::new).collect(Collectors.toList());
