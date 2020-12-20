@@ -36,6 +36,10 @@ public class PwingeiEntity {
 	@NotNull
 	@Column(name = "IMAGEURL", nullable = false)
 	private String imageUrl;
+	
+	@NotNull
+	@Column(name = "IMAGEURL1", nullable = false)
+	private String imageUrl1;
 
 	@NotNull
 	@Column(name = "IMAGEURL2", nullable = false)
