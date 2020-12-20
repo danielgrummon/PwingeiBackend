@@ -19,11 +19,18 @@ public class PwingeiController {
 	@Autowired
 	private PwingeiService pwingeiService;
 
-	@GetMapping("/pwingei")
+	@GetMapping("/findAll")
 	@CrossOrigin(origins = "*")
 	public List<PwingeiDto> getWingeiList() {
 		return transformToPwingeiDto(pwingeiService.findAllPwingei());
 	}
+	
+	
+    @GetMapping(path = {"/{id}"})
+    @CrossOrigin(origins = "*")
+    public PwingeiEntity findOne(@PathVariable("id") int id){
+        return pwingeiService.findById(id).get();
+    }
 	
 	private List<PwingeiDto> transformToPwingeiDto(Collection<PwingeiEntity> pwingeiList){
 		return pwingeiList.stream().map(PwingeiDto::new).collect(Collectors.toList());
