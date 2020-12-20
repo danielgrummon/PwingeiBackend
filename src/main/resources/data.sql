@@ -24,5 +24,4 @@ INSERT INTO PWINGEI (ID, NAME, TYPE, LOCATION, DATE, IMAGEURL, IMAGEURL2, PRICE,
   (8, 'Steel Tail',    '40', 'Campoma Bridge', '2011', '/assets/images/campoma40.jpg', '/assets/images/campoma40b.jpg', '45', 'NO',  'Add description here.'),
   (9, 'Lavender',      '43', 'Campoma Bridge', '2011', '/assets/images/campoma43.jpg', '/assets/images/campoma43b.jpg', '45', 'NO',  'Add description here.'),
   (10,'Aquamarine',    '45', 'Campoma Bridge', '2011', '/assets/images/campoma45.jpg', '/assets/images/campoma45b.jpg', '45', 'NO',  'Add description here.'),
-  (11,'Neon Green',    '52', 'Campoma Bridge', '2011', '/assets/images/campoma52.jpg', '/assets/images/campoma52b.jpg', '45', 'NO',  'Add description here.')
-                  
+  (11,'Neon Green',    '52', 'Campoma Bridge', '2011', '/assets/images/campoma52.jpg', '/assets/images/campoma52b.jpg', '45', 'NO',  'Add description here.')                 
