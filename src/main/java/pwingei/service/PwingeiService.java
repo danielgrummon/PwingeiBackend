@@ -23,7 +23,7 @@ public class PwingeiService {
 	}
 		
 
-    public Optional < PwingeiEntity > findById(int id) {
-        return pwingeiRepository.findById(new Long(id));
+    public Optional < PwingeiEntity > findById(Long id) {
+        return pwingeiRepository.findById(id);
     }
 }
