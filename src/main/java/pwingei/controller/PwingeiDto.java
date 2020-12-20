@@ -18,6 +18,7 @@ public class PwingeiDto {
 	private String imageUrl2;
 	private String price;
 	private String name;
+	private String available;
 	private String description;
 
 	PwingeiDto(PwingeiEntity pwingeiEntity) {
@@ -29,6 +30,7 @@ public class PwingeiDto {
 		this.imageUrl2 = pwingeiEntity.getImageUrl2();
 		this.price = pwingeiEntity.getPrice();
 		this.name = pwingeiEntity.getName();
+		this.available = pwingeiEntity.getAvailable();
 		this.description = pwingeiEntity.getDescription();
 	}
 
@@ -42,6 +44,7 @@ public class PwingeiDto {
 		pwingeiEntity.setImageUrl2(imageUrl2);
 		pwingeiEntity.setPrice(price);
 		pwingeiEntity.setName(name);
+		pwingeiEntity.setAvailable(available);
 		pwingeiEntity.setDescription(description);
 		return pwingeiEntity;
 	}
