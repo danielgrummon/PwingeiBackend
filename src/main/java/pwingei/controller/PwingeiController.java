@@ -25,11 +25,11 @@ public class PwingeiController {
 	public List<PwingeiDto> getWingeiList() {
 		return transformToPwingeiDto(pwingeiService.findAllPwingei());
 	}
-	
+		
 	@CrossOrigin
     @GetMapping(path = {"/{id}"})
-    public PwingeiEntity findOne(@PathVariable("id") int id){
-        return pwingeiService.findById(id).get();
+    public PwingeiDto findOne(@PathVariable("id") int id){
+        return new PwingeiDto(pwingeiService.findById(id).get());
     }
 	
 	private List<PwingeiDto> transformToPwingeiDto(Collection<PwingeiEntity> pwingeiList){
