@@ -35,6 +35,24 @@ dependencies {
 		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
 	}
 	testImplementation'org.hamcrest:hamcrest:2.1'
+
+
+  // Cucumber
+  
+  // https://mvnrepository.com/artifact/io.cucumber/cucumber-java
+compile group: 'io.cucumber', name: 'cucumber-java', version: '6.9.1'
+
+
+//only for junit 4
+// https://mvnrepository.com/artifact/io.cucumber/cucumber-junit
+//testCompile group: 'io.cucumber', name: 'cucumber-junit', version: '6.9.1'
+
+// https://mvnrepository.com/artifact/io.cucumber/cucumber-spring
+compile group: 'io.cucumber', name: 'cucumber-spring', version: '6.9.1'
+
+  // https://mvnrepository.com/artifact/io.cucumber/cucumber-junit-platform-engine
+compile group: 'io.cucumber', name: 'cucumber-junit-platform-engine', version: '6.9.1'
+  
 }
 
 test {
