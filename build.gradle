@@ -1,12 +1,12 @@
 plugins {
-	id 'org.springframework.boot' version '2.2.4.RELEASE'
-	id 'io.spring.dependency-management' version '1.0.9.RELEASE'
+	id 'org.springframework.boot' version '2.4.2'
+	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
 	id 'java'
 }
 
 group = 'pwingei'
 version = '0.0.1-SNAPSHOT'
-sourceCompatibility = '1.8'
+sourceCompatibility = '11'
 
 configurations {
 	developmentOnly
@@ -25,6 +25,7 @@ repositories {
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 	implementation 'org.springframework.boot:spring-boot-starter-data-rest'
+	implementation 'org.springframework.boot:spring-boot-starter-validation'
 	implementation 'org.projectlombok:lombok'
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
 	runtimeOnly 'com.h2database:h2'
@@ -34,6 +35,24 @@ dependencies {
 		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
 	}
 	testImplementation'org.hamcrest:hamcrest:2.1'
+
+
+  // Cucumber
+  
+  // https://mvnrepository.com/artifact/io.cucumber/cucumber-java
+compile group: 'io.cucumber', name: 'cucumber-java', version: '6.9.1'
+
+
+//only for junit 4
+// https://mvnrepository.com/artifact/io.cucumber/cucumber-junit
+//testCompile group: 'io.cucumber', name: 'cucumber-junit', version: '6.9.1'
+
+// https://mvnrepository.com/artifact/io.cucumber/cucumber-spring
+compile group: 'io.cucumber', name: 'cucumber-spring', version: '6.9.1'
+
+  // https://mvnrepository.com/artifact/io.cucumber/cucumber-junit-platform-engine
+compile group: 'io.cucumber', name: 'cucumber-junit-platform-engine', version: '6.9.1'
+  
 }
 
 test {
